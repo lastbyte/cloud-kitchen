@@ -1,7 +1,6 @@
-import {configureStore} from '@reduxjs/toolkit'
-import themeReducer from "@redux/reducers/themeReducer";
-import codeSnipperReducer from "@redux/reducers/codeSnipperReducer";
-
+import { configureStore } from "@reduxjs/toolkit";
+import appConfigReducer from "@src/app/redux/reducers/appConfigReducer";
 export default configureStore({
-    reducer: {theme: themeReducer, codeSnippet : codeSnipperReducer},
-})
+  reducer: { appConfig: appConfigReducer },
+});
+
