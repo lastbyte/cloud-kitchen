@@ -60,7 +60,7 @@ const TopRestaurants = styled(Grid)(({ theme }) => ({
   alignItems: 'center',
   width: "100%",
   padding: theme.spacing(2),
-  background: theme.palette.background.paper,
+  background: theme.palette.background.default,
 }));
 
 const RestaurantCardsContainer = styled(Grid)(({ theme }) => ({
@@ -79,7 +79,6 @@ const SectionContainer = styled(Grid)(({ theme }) => ({
   alignItems: 'center',
   width: '100%',
   overflowY: "scroll",
-  paddingBottom: theme.spacing(10),
 }));
 
 
@@ -91,9 +90,9 @@ const BestSellersSection = styled(Grid)(({ theme }) => ({
   borderRadius: theme.spacing(1),
   justifyContent: 'center',
   alignItems: 'center',
-  width: "80%",
   padding: theme.spacing(2),
-  background: theme.palette.background.default,
+  background: theme.palette.background.paper,
+  paddingBottom: theme.spacing(10),
 }));
 
 const BestSellerCardContainer = styled(Grid)(({ theme }) => ({
@@ -104,6 +103,7 @@ const BestSellerCardContainer = styled(Grid)(({ theme }) => ({
   borderRadius: theme.spacing(1),
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
+  width: "80%",
   padding: theme.spacing(2),
 }));
 
@@ -118,7 +118,7 @@ const ExploreSection = styled(Grid)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   width: "100%",
-  background: theme.palette.background.default,
+  background: theme.palette.background.paper,
   flexDirection: 'column',
 }));
 
@@ -131,7 +131,7 @@ const TopOffersSection = styled(Grid)(({ theme }) => ({
   alignItems: 'center',
   width: "100%",
   padding: theme.spacing(2),
-  background: theme.palette.background.paper,
+  background: theme.palette.background.default,
 }));
 
 
@@ -181,21 +181,6 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
             </IconButton>
           </SearchWrapper>
         </SectionTop>
-        <TopOffersSection container>
-          <SectionHeader container>
-            <Typography variant="h2" component="h2" gutterBottom>
-              Top Offers
-            </Typography>
-          </SectionHeader>
-
-          <TopOfferCardsContainer container>
-            <TopOfferCard icon={PlusOneIcon} displayText="BUY 1 GET 1 FREE" />
-            <TopOfferCard icon={PercentIcon} displayText="FLAT 20% OFF" />
-            <TopOfferCard icon={DeliveryDiningIcon} displayText="FREE DELIVERY" />
-          </TopOfferCardsContainer>
-
-        </TopOffersSection>
-
 
         <ExploreSection container>
           <SectionHeader container>
@@ -214,6 +199,24 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
           </CategoryCardContainer>
 
         </ExploreSection>
+
+        {/* <TopOffersSection container>
+          <SectionHeader container>
+            <Typography variant="h2" component="h2" gutterBottom>
+              Top Offers
+            </Typography>
+          </SectionHeader>
+
+          <TopOfferCardsContainer container>
+            <TopOfferCard icon={PlusOneIcon} displayText="BUY 1 GET 1 FREE" />
+            <TopOfferCard icon={PercentIcon} displayText="FLAT 20% OFF" />
+            <TopOfferCard icon={DeliveryDiningIcon} displayText="FREE DELIVERY" />
+          </TopOfferCardsContainer>
+
+        </TopOffersSection> */}
+
+
+
         <TopRestaurants container>
 
           <SectionHeader container>

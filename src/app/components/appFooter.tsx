@@ -7,13 +7,10 @@ const AppFooter = () => {
       <Grid item container xs={6} sx={(theme) => ({ gap: theme.spacing(2) })}>
         <Grid item container sx={(theme) => ({ gap: theme.spacing(2) })}>
           <Box>
-            <Typography>Support</Typography>
+            <Typography>About</Typography>
           </Box>
           <Box>
             <Typography>Help</Typography>
-          </Box>
-          <Box>
-            <Typography>FAQ</Typography>
           </Box>
           <Box>
             <Typography>Contact</Typography>
