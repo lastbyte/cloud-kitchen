@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea } from '@mui/material';
+import { Button, CardActionArea, Grid } from '@mui/material';
 
 
 const DescriptionContent = styled('div')(({ theme }) => ({
@@ -16,12 +16,10 @@ const DescriptionContent = styled('div')(({ theme }) => ({
 const ActionsContent = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  pl: 1,
-  pb: 1,
+  padding: theme.spacing(2),
 }));
 
-const CardContentContainer = styled('div')(({ theme }) => ({
-  display: 'flex',
+const CardContentContainer = styled(Grid)(({ theme }) => ({
   flexDirection: 'column',
   height: '100%',
   justifyContent: 'space-between',
@@ -32,9 +30,9 @@ export default function RestaurantCard() {
   return (
     <Card variant="outlined" >
       <CardActionArea sx={{ display: 'flex' }} >
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Grid sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent sx={{ flex: '1 0 auto' }}>
-            <CardContentContainer>
+            <CardContentContainer container>
               <DescriptionContent>
                 <Typography component="div" variant="h6">
                   Chatori
@@ -44,15 +42,15 @@ export default function RestaurantCard() {
                 </Typography>
 
               </DescriptionContent>
-              <ActionsContent>
-                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                  <Typography variant="button">100+ orders</Typography>
-                </Box>
-
-              </ActionsContent>
             </CardContentContainer>
           </CardContent>
-        </Box>
+          <ActionsContent>
+            <Box sx={{ display: 'flex', alignItems: 'center', pl: 4, pb: 4 }}>
+              <Typography variant="button">100+ orders</Typography>
+            </Box>
+
+          </ActionsContent>
+        </Grid>
         <CardMedia
           component="img"
           sx={{ width: 180, height: 180, display: { sm: 'block' } }}
