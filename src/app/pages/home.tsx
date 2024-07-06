@@ -14,12 +14,15 @@ import { blue, orange } from "@mui/material/colors";
 
 
 const SectionTop = styled(Grid)(({ theme }) => ({
-  gap: theme.spacing(2),
+  gap: theme.spacing(1),
   boxSizing: 'border-box',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  flexWrap: "nowrap",
+  paddingBlock: theme.spacing(8),
+  paddingTop: theme.spacing(16),
   background: theme.palette.primary.main,
-  height: 300,
 }));
 
 const SectionHeader = styled(Grid)(({ theme }) => ({
@@ -39,12 +42,14 @@ const SearchWrapper = styled(Grid)(({ theme }) => ({
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '600px',
   height: 'fit-content',
   background: theme.palette.background.paper,
   padding: theme.spacing(1),
   paddingInline: theme.spacing(2),
   borderRadius: theme.spacing(10),
+  minWidth: 300,
+  maxWidth: 600,
+  width: "80%"
 }));
 
 
@@ -94,14 +99,14 @@ const BestSellersSection = styled(Grid)(({ theme }) => ({
 }));
 
 const BestSellerCardContainer = styled(Grid)(({ theme }) => ({
-  gap: theme.spacing(4),
+  gap: theme.spacing(2),
   boxSizing: 'border-box',
   height: 'fit-content',
   paddingInline: theme.spacing(2),
   borderRadius: theme.spacing(1),
-  justifyContent: 'flex-start',
+  justifyContent: 'center',
   alignItems: 'flex-start',
-  width: "80%",
+  width: "100%",
   padding: theme.spacing(2),
 }));
 
@@ -168,14 +173,20 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
       <NavBar />
       <SectionContainer>
         <SectionTop container>
+          <Typography variant="h2" component="h1" gutterBottom>
+            Chatori
+          </Typography>
+          <Typography variant="h4" component="h4" gutterBottom sx={{ textAlign: "center" }}>
+            Order from the best Restaurant in town
+          </Typography>
           <SearchWrapper>
             <InputBase
-              sx={{ minWidth: "200px", minHeight: "60px", flex: 1, borderRadius: "24px", padding: "10px" }}
+              sx={{ minWidth: "200px", minHeight: "48px", flex: 1, borderRadius: "24px", padding: "10px" }}
               placeholder="burger, pizza ..."
               inputProps={{ 'aria-label': 'burger, pizza ...' }}
             />
             <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-              <SearchIcon />
+              <SearchIcon sx={{ fontSize: "2rem" }} />
             </IconButton>
           </SearchWrapper>
         </SectionTop>

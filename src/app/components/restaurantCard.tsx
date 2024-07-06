@@ -30,7 +30,7 @@ const CardContentContainer = styled('div')(({ theme }) => ({
 export default function RestaurantCard() {
 
   return (
-    <Card variant="outlined" sx={{ display: 'flex' }}>
+    <Card variant="outlined" >
       <CardActionArea sx={{ display: 'flex' }} >
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent sx={{ flex: '1 0 auto' }}>
@@ -55,7 +55,7 @@ export default function RestaurantCard() {
         </Box>
         <CardMedia
           component="img"
-          sx={{ width: 180, height: 180, display: { xs: 'none', sm: 'block' } }}
+          sx={{ width: 180, height: 180, display: { sm: 'block' } }}
           image="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxMDY2NjE4LWltYWdlLWt3dnkzdnltLmpwZw.jpg"
           alt="Live from space album cover"
         />

@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={() => { return theme == THEME.light ? LightTheme : DarkTheme }}>
+    <ThemeProvider theme={theme == THEME.light ? LightTheme : DarkTheme}>
       <Suspense fallback={<div></div>}>
         <AppRouter>
         </AppRouter>
