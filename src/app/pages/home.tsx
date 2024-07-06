@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger, faCakeCandles, faEgg, faMugHot, faPizzaSlice, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import MiniFoodCard from "../components/miniFoodCard";
 import AppFooter from "../components/appFooter";
-import { blue, orange } from "@mui/material/colors";
 
 
 
