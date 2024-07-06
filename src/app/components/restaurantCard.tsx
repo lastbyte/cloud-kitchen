@@ -30,7 +30,7 @@ const CardContentContainer = styled('div')(({ theme }) => ({
 export default function RestaurantCard() {
 
   return (
-    <Card sx={{ display: 'flex' }}>
+    <Card variant="outlined" sx={{ display: 'flex' }}>
       <CardActionArea sx={{ display: 'flex' }} >
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent sx={{ flex: '1 0 auto' }}>

@@ -33,7 +33,7 @@ export default function MiniFoodCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 240 }}>
+    <Card variant="outlined" sx={{ maxWidth: 240 }}>
       <CardActionArea>
         <CardHeader />
         <CardMedia

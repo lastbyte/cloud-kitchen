@@ -1,18 +1,15 @@
 import React from "react";
 import '@pages/styles/home.css';
-import { createStyles, Divider, Grid, IconButton, InputBase, styled, Theme, Typography, useTheme } from "@mui/material";
+import { Divider, Grid, IconButton, InputBase, styled, Typography, useTheme } from "@mui/material";
 import NavBar from "../components/appbar";
 import SearchIcon from '@mui/icons-material/Search';
 import RestaurantCard from "../components/restaurantCard";
-import TopOfferCard from "../components/topOfferCard";
-import PlusOneIcon from '@mui/icons-material/PlusOne';
-import PercentIcon from '@mui/icons-material/Percent';
-import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 import CategoryCard from "../components/categoryCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger, faCakeCandles, faEgg, faMugHot, faPizzaSlice, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import MiniFoodCard from "../components/miniFoodCard";
 import AppFooter from "../components/appFooter";
+import { blue, orange } from "@mui/material/colors";
 
 
 
@@ -21,6 +18,7 @@ const SectionTop = styled(Grid)(({ theme }) => ({
   boxSizing: 'border-box',
   justifyContent: 'center',
   alignItems: 'center',
+  background: theme.palette.primary.main,
   height: 300,
 }));
 
@@ -46,7 +44,7 @@ const SearchWrapper = styled(Grid)(({ theme }) => ({
   background: theme.palette.background.paper,
   padding: theme.spacing(1),
   paddingInline: theme.spacing(2),
-  borderRadius: theme.spacing(1),
+  borderRadius: theme.spacing(10),
 }));
 
 
@@ -172,7 +170,7 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
         <SectionTop container>
           <SearchWrapper>
             <InputBase
-              sx={{ minWidth: "200px", flex: 1 }}
+              sx={{ minWidth: "200px", minHeight: "60px", flex: 1, borderRadius: "24px", padding: "10px" }}
               placeholder="burger, pizza ..."
               inputProps={{ 'aria-label': 'burger, pizza ...' }}
             />
