@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger, faCakeCandles, faEgg, faMugHot, faPizzaSlice, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import MiniFoodCard from "../components/miniFoodCard";
 import AppFooter from "../components/appFooter";
+import SearchBox from "../components/searchBox";
+import SearchFilters from "../components/searchFilters";
 
 
 
@@ -178,16 +180,8 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
           <Typography variant="h4" component="h4" gutterBottom sx={{ textAlign: "center" }}>
             Order from the best Restaurant in town
           </Typography>
-          <SearchWrapper>
-            <InputBase
-              sx={{ minWidth: "200px", minHeight: "48px", flex: 1, borderRadius: "24px", padding: "10px" }}
-              placeholder="burger, pizza ..."
-              inputProps={{ 'aria-label': 'burger, pizza ...' }}
-            />
-            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-              <SearchIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
-          </SearchWrapper>
+          <SearchBox />
+          <SearchFilters />
         </SectionTop>
 
         <ExploreSection container>

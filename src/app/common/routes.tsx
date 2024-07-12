@@ -3,6 +3,7 @@ import { lazy } from "react";
 
 const HomeComponent = lazy(() => import("../pages/home"));
 const SearchPage = lazy(() => import("../pages/search"));
+const RestaurantPage = lazy(() => import("../pages/restaurant"));
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     "path": "/search",
     "element": <SearchPage />
+  },
+  {
+    "path": "/restaurant/:id",
+    "element": <RestaurantPage />
   }
 ]);
 

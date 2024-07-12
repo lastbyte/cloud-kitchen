@@ -7,7 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button, CardActionArea, Grid } from '@mui/material';
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -28,9 +27,6 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 export default function MiniFoodCard() {
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
     <Card variant="outlined" sx={{ maxWidth: 240 }}>

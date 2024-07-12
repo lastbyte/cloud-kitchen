@@ -26,7 +26,6 @@ const SectionTop = styled(Grid)(({ theme }) => ({
 const SectionContainer = styled(Grid)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
   overflowY: "scroll",
   minHeight: "100vh",
 }));
@@ -43,10 +42,10 @@ const SearchResults = styled(Grid)(({ theme }) => ({
   alignItems: 'center',
 }));
 
-interface SearchPageProps {
+interface RestaurantPageProps {
 }
 
-const Search: React.FC<SearchPageProps> = (props: SearchPageProps) => {
+const Restaurant: React.FC<RestaurantPageProps> = (props: RestaurantPageProps) => {
 
   return (
     <>
@@ -69,4 +68,4 @@ const Search: React.FC<SearchPageProps> = (props: SearchPageProps) => {
   );
 }
 
-export default Search
+export default Restaurant
